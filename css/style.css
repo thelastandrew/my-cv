@@ -98,4 +98,68 @@ html {
   font-weight: 500;
   line-height: 1.5em;
 }
+
+.skills__section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 80px;
+          column-gap: 80px;
+}
+
+.skill {
+  width: 185px;
+  margin-bottom: 1.9rem;
+}
+
+.skill__skill-name {
+  font-size: 1.9rem;
+  line-height: 1.2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.progress-bar {
+  height: 5px;
+  background: #EBEBEB;
+}
+
+.progress-bar__progress {
+  height: 5px;
+  background-color: #FECB00;
+}
+
+.html .progress-bar__progress {
+  width: 95%;
+}
+
+.css .progress-bar__progress {
+  width: 90%;
+}
+
+.js .progress-bar__progress {
+  width: 75%;
+}
+
+.node .progress-bar__progress {
+  width: 20%;
+}
+
+.figma .progress-bar__progress {
+  width: 90%;
+}
+
+.vs-code .progress-bar__progress {
+  width: 90%;
+}
+
+.git .progress-bar__progress {
+  width: 85%;
+}
 /*# sourceMappingURL=style.css.map */
