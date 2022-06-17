@@ -35,9 +35,12 @@ a {
   flex-direction: row-reverse;
 }
 
+.column {
+  padding-top: 110px;
+}
+
 .main-column {
   width: 64%;
-  padding-top: 110px;
 }
 
 .sub-column {
@@ -242,4 +245,18 @@ a {
   text-transform: uppercase;
   text-align: center;
   transition: all 0.3s;
+}
+
+.userpic {
+  margin-bottom: 6.3rem;
+}
+
+.userpic__content {
+  background-image: url('../assets/jpeg/userpic.jpg');
+  background-size: 100%;
+  width: 26.25rem;
+  height: 26.25rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 7px solid $yellow;
 }
