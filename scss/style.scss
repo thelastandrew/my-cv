@@ -22,6 +22,11 @@ html {
   font-size: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   max-width: 1280px;
   min-height: 100vh;
@@ -139,3 +144,102 @@ html {
 .figma .progress-bar__progress {width: 90%}
 .vs-code .progress-bar__progress {width: 90%}
 .git .progress-bar__progress {width: 85%}
+
+.arrow {
+  cursor: pointer;
+  padding: 5px;
+
+  &__line {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $yellow;
+    }
+  }
+
+  &--left &__line {
+    &::before {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+    &::after {
+      transform: translateY(6px) rotate(45deg);
+    }
+  }
+
+  &--right &__line {
+    &::before {
+      transform: translateY(-6px) rotate(45deg);
+    }
+    &::after {
+      transform: translateY(6px) rotate(-45deg);
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__frame {
+    width: 53.3rem;
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__slides {
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    flex-wrap: nowrap;
+    position: relative;
+    transition: ease 0.3s;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    width: 53.3rem;
+    height: 40rem;
+    background-size: 100%;
+    transition: all 0.3s;
+
+    &:hover {
+      filter: grayscale(50%);
+
+      & .slide__title {
+        bottom: 0;
+      }
+    }
+
+    &.game-of-life {background-image: url('../assets/jpeg/game-of-life.jpg');}
+    &.audio-player {background-image: url('../assets/jpeg/audio-player.jpg');}
+    &.portfolio {background-image: url('../assets/jpeg/portfolio.jpg');}
+    &.memory-game {background-image: url('../assets/jpeg/memory-game.jpg');}
+    &.shelter {background-image: url('../assets/jpeg/shelter.jpg');}
+    &.random-jokes {background-image: url('../assets/jpeg/random-gokes.jpg');}
+  }
+}
+
+.slide__title {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: $grey-bg;
+  font-size: 1.9rem;
+  line-height: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s;
+}

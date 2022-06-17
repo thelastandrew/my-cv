@@ -13,6 +13,11 @@ html {
   font-size: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .wrapper {
   max-width: 1280px;
   min-height: 100vh;
@@ -161,5 +166,141 @@ html {
 
 .git .progress-bar__progress {
   width: 85%;
+}
+
+.arrow {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.arrow__line::before, .arrow__line::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #FECB00;
+}
+
+.arrow--left .arrow__line::before {
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+          transform: translateY(-6px) rotate(-45deg);
+}
+
+.arrow--left .arrow__line::after {
+  -webkit-transform: translateY(6px) rotate(45deg);
+          transform: translateY(6px) rotate(45deg);
+}
+
+.arrow--right .arrow__line::before {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+}
+
+.arrow--right .arrow__line::after {
+  -webkit-transform: translateY(6px) rotate(-45deg);
+          transform: translateY(6px) rotate(-45deg);
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider__frame {
+  width: 53.3rem;
+  height: 40rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider__slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+.slider__slide {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 53.3rem;
+  height: 40rem;
+  background-size: 100%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.slider__slide:hover {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.slider__slide:hover .slide__title {
+  bottom: 0;
+}
+
+.slider__slide.game-of-life {
+  background-image: url("../assets/jpeg/game-of-life.jpg");
+}
+
+.slider__slide.audio-player {
+  background-image: url("../assets/jpeg/audio-player.jpg");
+}
+
+.slider__slide.portfolio {
+  background-image: url("../assets/jpeg/portfolio.jpg");
+}
+
+.slider__slide.memory-game {
+  background-image: url("../assets/jpeg/memory-game.jpg");
+}
+
+.slider__slide.shelter {
+  background-image: url("../assets/jpeg/shelter.jpg");
+}
+
+.slider__slide.random-jokes {
+  background-image: url("../assets/jpeg/random-gokes.jpg");
+}
+
+.slide__title {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  background-color: #EBEBEB;
+  font-size: 1.9rem;
+  line-height: 1.2em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
