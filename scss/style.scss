@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;600;700&display=swap');
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+
+$dark-bg: #1B1E2F;
+$bark-title: #232537;
+$dark-title-underline: #393A4D;
+$yellow: #FECB00;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+}
