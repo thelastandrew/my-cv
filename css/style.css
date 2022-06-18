@@ -363,4 +363,14 @@ a {
 .sub-column dd:not(:last-child) {
   margin-bottom: 3.2rem;
 }
+
+.sub-column .soft-skills__list {
+  font-size: 2.1rem;
+  line-height: 1.22em;
+  font-weight: 600;
+}
+
+.sub-column .soft-skills__list li {
+  margin-bottom: 2rem;
+}
 /*# sourceMappingURL=style.css.map */
