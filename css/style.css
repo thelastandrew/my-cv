@@ -347,20 +347,20 @@ a {
   border: 7px solid #FECB00;
 }
 
-.contacts__list dt {
+.sub-column dt {
   font-size: 2.1rem;
   line-height: 1.22em;
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
 
-.contacts__list dd {
+.sub-column dd {
   font-size: 1.6rem;
   line-height: 1.22em;
   font-weight: 500;
 }
 
-.contacts__list dd:not(:last-child) {
+.sub-column dd:not(:last-child) {
   margin-bottom: 3.2rem;
 }
 /*# sourceMappingURL=style.css.map */
