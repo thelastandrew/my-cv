@@ -41,11 +41,25 @@ a {
 
 .main-column {
   width: 64%;
+
+  & .section {
+    margin-bottom: 6rem;
+  }
 }
 
 .sub-column {
   background-color: $dark-bg;
+  color: white;
   width: 36%;
+
+  & .content-wrapper {
+    padding-left: 24%;
+    padding-right: 24%;;
+  }
+
+  & .section {
+    margin-bottom: 10rem;
+  }
 }
 
 .content-wrapper {
@@ -71,15 +85,27 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
   }
 
   &--light{
     background-color: $grey-bg;
   }
-}
 
-.section {
-  margin-bottom: 6rem;
+  &--dark {
+    background-color: $dark-title;
+    
+    &::after {
+      content: '';
+      display: block;
+      height: 4px;
+      width: 100%;
+      background-color: $dark-title-underline;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
 }
 
 .header {
@@ -150,7 +176,7 @@ a {
 
 .arrow {
   cursor: pointer;
-  padding: 5px;
+  padding: 30px 5px;
 
   &__line {
     &::before,
@@ -259,4 +285,23 @@ a {
   margin: 0 auto;
   border-radius: 50%;
   border: 7px solid $yellow;
+}
+
+.contacts__list {
+  & dt {
+    font-size: 2.1rem;
+    line-height: 1.22em;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+  }
+
+  & dd {
+    font-size: 1.6rem;
+    line-height: 1.22em;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-bottom: 3.2rem;
+    }
+  }
 }

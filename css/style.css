@@ -39,9 +39,23 @@ a {
   width: 64%;
 }
 
+.main-column .section {
+  margin-bottom: 6rem;
+}
+
 .sub-column {
   background-color: #1B1E2F;
+  color: white;
   width: 36%;
+}
+
+.sub-column .content-wrapper {
+  padding-left: 24%;
+  padding-right: 24%;
+}
+
+.sub-column .section {
+  margin-bottom: 10rem;
 }
 
 .content-wrapper {
@@ -68,14 +82,26 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 
 .heading--light {
   background-color: #EBEBEB;
 }
 
-.section {
-  margin-bottom: 6rem;
+.heading--dark {
+  background-color: #232537;
+}
+
+.heading--dark::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #393A4D;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .header {
@@ -173,7 +199,7 @@ a {
 
 .arrow {
   cursor: pointer;
-  padding: 5px;
+  padding: 30px 5px;
 }
 
 .arrow__line::before, .arrow__line::after {
@@ -319,5 +345,22 @@ a {
   margin: 0 auto;
   border-radius: 50%;
   border: 7px solid #FECB00;
+}
+
+.contacts__list dt {
+  font-size: 2.1rem;
+  line-height: 1.22em;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.contacts__list dd {
+  font-size: 1.6rem;
+  line-height: 1.22em;
+  font-weight: 500;
+}
+
+.contacts__list dd:not(:last-child) {
+  margin-bottom: 3.2rem;
 }
 /*# sourceMappingURL=style.css.map */
