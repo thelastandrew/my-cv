@@ -24,16 +24,45 @@ a {
   color: inherit;
 }
 
-.wrapper {
-  max-width: 1280px;
-  min-height: 100vh;
-  margin: 0 auto;
+.header,
+.main {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.column {
-  padding-top: 6.3rem;
+  .title {
+    width: 64%;
+    padding-top: 6.3rem;
+    padding-bottom: 6.3rem;
+
+    .heading {
+      padding-top: 7.2rem;
+      padding-bottom: 7.2rem;
+      margin-bottom: 0;
+    }
+  }
+  
+  .userpic {
+    width: 36%;;
+    padding-top: 6.3rem;
+    padding-bottom: 6.3rem;
+    background-color: $dark-bg;
+
+    &__content {
+      background-image: url('../assets/jpeg/userpic.jpg');
+      background-size: 100%;
+      width: 26.25rem;
+      height: 26.25rem;
+      margin: 0 auto;
+      border-radius: 50%;
+      border: 7px solid $yellow;
+    }
+  }
+
+.wrapper {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 .main-column {
@@ -93,6 +122,17 @@ a {
     z-index: 2;
   }
 
+  &__main {
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1.2em;
+    margin-bottom: 1.6rem;
+  }
+
+  &__subtitle {
+    font-weight: 500;
+  }
+
   &--light{
     background-color: $grey-bg;
   }
@@ -111,28 +151,9 @@ a {
       left: 0;
     }
   }
-}
 
-.header {
-  padding-top: 7.2rem;
-  padding-bottom: 7.2rem;
-  margin-bottom: 6.3rem;
-
-  &__title {
-    font-size: 6rem;
-    font-weight: 500;
-    line-height: 1.2em;
-    margin-bottom: 1.6rem;
-
-    &--bold {
-      font-weight: 700;
-    }
-  }
-
-  &__subtitle {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.22em;
+  &--bold {
+    font-weight: 700;
   }
 }
 
@@ -278,20 +299,6 @@ a {
   transition: all 0.3s;
 }
 
-.userpic {
-  margin-bottom: 6.3rem;
-}
-
-.userpic__content {
-  background-image: url('../assets/jpeg/userpic.jpg');
-  background-size: 100%;
-  width: 26.25rem;
-  height: 26.25rem;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 7px solid $yellow;
-}
-
 .sub-column {
   & dt {
     font-size: 2.1rem;
@@ -322,10 +329,18 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
+  .header,
+  .main {
     flex-direction: column;
   }
 
+  .title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .title,
+  .userpic,
   .main-column,
   .sub-column {
     width: 100%;

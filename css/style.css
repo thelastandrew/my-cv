@@ -18,10 +18,8 @@ a {
   color: inherit;
 }
 
-.wrapper {
-  max-width: 1280px;
-  min-height: 100vh;
-  margin: 0 auto;
+.header,
+.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,8 +29,39 @@ a {
           flex-direction: row-reverse;
 }
 
-.column {
+.title {
+  width: 64%;
   padding-top: 6.3rem;
+  padding-bottom: 6.3rem;
+}
+
+.title .heading {
+  padding-top: 7.2rem;
+  padding-bottom: 7.2rem;
+  margin-bottom: 0;
+}
+
+.userpic {
+  width: 36%;
+  padding-top: 6.3rem;
+  padding-bottom: 6.3rem;
+  background-color: #1B1E2F;
+}
+
+.userpic__content {
+  background-image: url("../assets/jpeg/userpic.jpg");
+  background-size: 100%;
+  width: 26.25rem;
+  height: 26.25rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 7px solid #FECB00;
+}
+
+.wrapper {
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
 }
 
 .main-column {
@@ -93,6 +122,17 @@ a {
   z-index: 2;
 }
 
+.heading__main {
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 1.6rem;
+}
+
+.heading__subtitle {
+  font-weight: 500;
+}
+
 .heading--light {
   background-color: #EBEBEB;
 }
@@ -112,27 +152,8 @@ a {
   left: 0;
 }
 
-.header {
-  padding-top: 7.2rem;
-  padding-bottom: 7.2rem;
-  margin-bottom: 6.3rem;
-}
-
-.header__title {
-  font-size: 6rem;
-  font-weight: 500;
-  line-height: 1.2em;
-  margin-bottom: 1.6rem;
-}
-
-.header__title--bold {
+.heading--bold {
   font-weight: 700;
-}
-
-.header__subtitle {
-  font-size: 2.5rem;
-  font-weight: 500;
-  line-height: 1.22em;
 }
 
 .content {
@@ -341,20 +362,6 @@ a {
   transition: all 0.3s;
 }
 
-.userpic {
-  margin-bottom: 6.3rem;
-}
-
-.userpic__content {
-  background-image: url("../assets/jpeg/userpic.jpg");
-  background-size: 100%;
-  width: 26.25rem;
-  height: 26.25rem;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 7px solid #FECB00;
-}
-
 .sub-column dt {
   font-size: 2.1rem;
   line-height: 1.22em;
@@ -383,12 +390,19 @@ a {
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
+  .header,
+  .main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .title,
+  .userpic,
   .main-column,
   .sub-column {
     width: 100%;
