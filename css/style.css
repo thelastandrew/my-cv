@@ -43,6 +43,10 @@ a {
   margin-bottom: 6rem;
 }
 
+.main-column a {
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
+}
+
 .sub-column {
   background-color: #1B1E2F;
   color: white;
@@ -56,6 +60,10 @@ a {
 
 .sub-column .section {
   margin-bottom: 4rem;
+}
+
+.sub-column a {
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
 }
 
 .content-wrapper {

@@ -39,8 +39,12 @@ a {
 .main-column {
   width: 64%;
 
-  & .section {
+  .section {
     margin-bottom: 6rem;
+  }
+
+  a {
+    border-bottom: 2px dotted rgba(0,0,0,0.2);
   }
 }
 
@@ -49,13 +53,17 @@ a {
   color: white;
   width: 36%;
 
-  & .content-wrapper {
+  .content-wrapper {
     padding-left: 24%;
     padding-right: 24%;;
   }
 
-  & .section {
+  .section {
     margin-bottom: 4rem;
+  }
+
+  a {
+    border-bottom: 2px dotted rgba(255,255,255,0.2);
   }
 }
 
