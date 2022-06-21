@@ -312,3 +312,14 @@ a {
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .main-column,
+  .sub-column {
+    width: 100%;
+  }
+}

@@ -373,4 +373,17 @@ a {
 .sub-column .soft-skills__list li {
   margin-bottom: 2rem;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-column,
+  .sub-column {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=style.css.map */
