@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
-$dark-bg: #1B1E2F;
-$grey-bg: #EBEBEB;
+$dark-bg: #1b1e2f;
+$grey-bg: #ebebeb;
 $dark-title: #232537;
-$dark-title-underline: #393A4D;
-$yellow: #FECB00;
+$dark-title-underline: #393a4d;
+$yellow: #fecb00;
 
 *,
 *::before,
@@ -30,34 +30,34 @@ a {
   flex-direction: row-reverse;
 }
 
-  .title {
-    width: 64%;
-    padding-top: 6.3rem;
-    padding-bottom: 6.3rem;
+.title {
+  width: 64%;
+  padding-top: 6.3rem;
+  padding-bottom: 6.3rem;
 
-    .heading {
-      padding-top: 7.2rem;
-      padding-bottom: 7.2rem;
-      margin-bottom: 0;
-    }
+  .heading {
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+    margin-bottom: 0;
   }
-  
-  .userpic {
-    width: 36%;;
-    padding-top: 6.3rem;
-    padding-bottom: 6.3rem;
-    background-color: $dark-bg;
+}
 
-    &__content {
-      background-image: url('../assets/jpeg/userpic.jpg');
-      background-size: 100%;
-      width: 26.25rem;
-      height: 26.25rem;
-      margin: 0 auto;
-      border-radius: 50%;
-      border: 7px solid $yellow;
-    }
+.userpic {
+  width: 36%;
+  padding-top: 6.3rem;
+  padding-bottom: 6.3rem;
+  background-color: $dark-bg;
+
+  &__content {
+    background-image: url('../assets/jpeg/userpic.jpg');
+    background-size: 100%;
+    width: 26.25rem;
+    height: 26.25rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 7px solid $yellow;
   }
+}
 
 .wrapper {
   max-width: 1280px;
@@ -73,7 +73,7 @@ a {
   }
 
   a {
-    border-bottom: 2px dotted rgba(0,0,0,0.2);
+    border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -84,7 +84,7 @@ a {
 
   .content-wrapper {
     padding-left: 24%;
-    padding-right: 24%;;
+    padding-right: 24%;
   }
 
   .section {
@@ -92,7 +92,7 @@ a {
   }
 
   a {
-    border-bottom: 2px dotted rgba(255,255,255,0.2);
+    border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -106,7 +106,7 @@ a {
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2em;
-  padding: .5em 10%;
+  padding: 0.5em 10%;
   margin-bottom: 3.2rem;
   position: relative;
 
@@ -133,13 +133,13 @@ a {
     font-weight: 500;
   }
 
-  &--light{
+  &--light {
     background-color: $grey-bg;
   }
 
   &--dark {
     background-color: $dark-title;
-    
+
     &::after {
       content: '';
       display: block;
@@ -192,13 +192,27 @@ a {
   }
 }
 
-.html .progress-bar__progress {width: 95%}
-.css .progress-bar__progress {width: 90%}
-.js .progress-bar__progress {width: 75%}
-.node .progress-bar__progress {width: 20%}
-.figma .progress-bar__progress {width: 90%}
-.vs-code .progress-bar__progress {width: 90%}
-.git .progress-bar__progress {width: 85%}
+.html .progress-bar__progress {
+  width: 95%;
+}
+.css .progress-bar__progress {
+  width: 90%;
+}
+.js .progress-bar__progress {
+  width: 75%;
+}
+.node .progress-bar__progress {
+  width: 20%;
+}
+.figma .progress-bar__progress {
+  width: 90%;
+}
+.vs-code .progress-bar__progress {
+  width: 90%;
+}
+.git .progress-bar__progress {
+  width: 85%;
+}
 
 .arrow {
   cursor: pointer;
@@ -241,19 +255,17 @@ a {
   align-items: center;
 
   &__frame {
-    width: 53.3rem;
-    height: 40rem;
+    width: 100%;
     overflow: hidden;
     position: relative;
   }
 
   &__slides {
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
     flex-wrap: nowrap;
     position: relative;
     transition: ease 0.3s;
@@ -261,10 +273,16 @@ a {
 
   &__slide {
     flex-shrink: 0;
-    width: 53.3rem;
-    height: 40rem;
+    width: 100%;
+    height: 0;
+    padding-top: 75%;
     background-size: 100%;
     transition: all 0.3s;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
 
     &:hover {
       filter: grayscale(50%);
@@ -274,12 +292,24 @@ a {
       }
     }
 
-    &.game-of-life {background-image: url('../assets/jpeg/game-of-life.jpg');}
-    &.audio-player {background-image: url('../assets/jpeg/audio-player.jpg');}
-    &.portfolio {background-image: url('../assets/jpeg/portfolio.jpg');}
-    &.memory-game {background-image: url('../assets/jpeg/memory-game.jpg');}
-    &.shelter {background-image: url('../assets/jpeg/shelter.jpg');}
-    &.random-jokes {background-image: url('../assets/jpeg/random-gokes.jpg');}
+    &.game-of-life {
+      background-image: url('../assets/jpeg/game-of-life.jpg');
+    }
+    &.audio-player {
+      background-image: url('../assets/jpeg/audio-player.jpg');
+    }
+    &.portfolio {
+      background-image: url('../assets/jpeg/portfolio.jpg');
+    }
+    &.memory-game {
+      background-image: url('../assets/jpeg/memory-game.jpg');
+    }
+    &.shelter {
+      background-image: url('../assets/jpeg/shelter.jpg');
+    }
+    &.random-jokes {
+      background-image: url('../assets/jpeg/random-gokes.jpg');
+    }
   }
 }
 
@@ -344,5 +374,14 @@ a {
   .main-column,
   .sub-column {
     width: 100%;
+  }
+
+  .heading__main {
+    font-size: 5rem;
+  }
+
+  .slide__title {
+    font-size: 1.5rem;
+    bottom: 0;
   }
 }
