@@ -192,26 +192,29 @@ a {
   }
 }
 
+.js .progress-bar__progress {
+  width: 85%;
+}
+.ts .progress-bar__progress {
+  width: 60%;
+}
+.react .progress-bar__progress {
+  width: 50%;
+}
 .html .progress-bar__progress {
   width: 95%;
 }
 .css .progress-bar__progress {
   width: 90%;
 }
-.js .progress-bar__progress {
-  width: 75%;
-}
 .node .progress-bar__progress {
   width: 20%;
 }
-.figma .progress-bar__progress {
-  width: 90%;
-}
-.vs-code .progress-bar__progress {
-  width: 90%;
-}
 .git .progress-bar__progress {
   width: 85%;
+}
+.webpack .progress-bar__progress {
+  width: 65%;
 }
 
 .arrow {
@@ -292,6 +295,9 @@ a {
       }
     }
 
+    &.news-portal {
+      background-image: url('../assets/jpeg/news-portal.png');
+    }
     &.game-of-life {
       background-image: url('../assets/jpeg/game-of-life.jpg');
     }
