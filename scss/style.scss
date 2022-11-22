@@ -207,9 +207,6 @@ a {
 .css .progress-bar__progress {
   width: 90%;
 }
-.node .progress-bar__progress {
-  width: 20%;
-}
 .git .progress-bar__progress {
   width: 85%;
 }
@@ -217,122 +214,24 @@ a {
   width: 65%;
 }
 
-.arrow {
-  cursor: pointer;
-  padding: 30px 5px;
-
-  &__line {
-    &::before,
-    &::after {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 2px;
-      background-color: $yellow;
-    }
+.projects {
+  ul {
+    font-size: 2rem;
   }
 
-  &--left &__line {
-    &::before {
-      transform: translateY(-6px) rotate(-45deg);
-    }
-    &::after {
-      transform: translateY(6px) rotate(45deg);
-    }
-  }
-
-  &--right &__line {
-    &::before {
-      transform: translateY(-6px) rotate(45deg);
-    }
-    &::after {
-      transform: translateY(6px) rotate(-45deg);
-    }
+  & p:not(:last-child) {
+    margin-bottom: 0.2em;
   }
 }
 
-.slider {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  &__frame {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+.project {
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
   }
 
-  &__slides {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: relative;
-    transition: ease 0.3s;
+  &__title {
+    margin-bottom: 0.3em;
   }
-
-  &__slide {
-    flex-shrink: 0;
-    width: 100%;
-    height: 0;
-    padding-top: 75%;
-    background-size: 100%;
-    transition: all 0.3s;
-    position: relative;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-
-    &:hover {
-      filter: grayscale(50%);
-
-      & .slide__title {
-        bottom: 0;
-      }
-    }
-
-    &.news-portal {
-      background-image: url('../assets/jpeg/news-portal.png');
-    }
-    &.game-of-life {
-      background-image: url('../assets/jpeg/game-of-life.jpg');
-    }
-    &.audio-player {
-      background-image: url('../assets/jpeg/audio-player.jpg');
-    }
-    &.portfolio {
-      background-image: url('../assets/jpeg/portfolio.jpg');
-    }
-    &.memory-game {
-      background-image: url('../assets/jpeg/memory-game.jpg');
-    }
-    &.shelter {
-      background-image: url('../assets/jpeg/shelter.jpg');
-    }
-    &.random-jokes {
-      background-image: url('../assets/jpeg/random-gokes.jpg');
-    }
-  }
-}
-
-.slide__title {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  background-color: $grey-bg;
-  font-size: 1.9rem;
-  line-height: 1.2em;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  transition: all 0.3s;
 }
 
 .sub-column {
