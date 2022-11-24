@@ -205,6 +205,10 @@ a {
   margin-bottom: 0.2em;
 }
 
+.project p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .project:not(:last-child) {
   margin-bottom: 2.5rem;
 }
@@ -256,5 +260,9 @@ a {
   .slide__title {
     font-size: 1.5rem;
     bottom: 0;
+  }
+  .sub-column .content-wrapper {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }/*# sourceMappingURL=style.css.map */
