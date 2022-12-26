@@ -27,13 +27,20 @@ a {
 .header,
 .main {
   display: flex;
+}
+
+.header {
   flex-direction: row-reverse;
+}
+
+.main {
+  flex-direction: row;
 }
 
 .title {
   width: 64%;
-  padding-top: 6.3rem;
-  padding-bottom: 6.3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   .heading {
     padding-top: 7.2rem;
@@ -44,8 +51,8 @@ a {
 
 .userpic {
   width: 36%;
-  padding-top: 6.3rem;
-  padding-bottom: 6.3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: $dark-bg;
 
   &__content {
@@ -69,7 +76,7 @@ a {
   width: 64%;
 
   .section {
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
   a {
@@ -88,7 +95,7 @@ a {
   }
 
   .section {
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
   }
 
   a {
@@ -107,7 +114,7 @@ a {
   font-weight: 600;
   line-height: 1.2em;
   padding: 0.5em 10%;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.5rem;
   position: relative;
 
   &::before {
@@ -167,7 +174,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: 80px;
+  column-gap: 50px;
 }
 
 .skill {
@@ -178,40 +185,12 @@ a {
     font-size: 1.9rem;
     line-height: 1.2em;
     font-weight: 500;
-    margin-bottom: 1em;
   }
-}
 
-.progress-bar {
-  height: 5px;
-  background: $grey-bg;
-
-  &__progress {
-    height: 5px;
-    background-color: $yellow;
+  &::marker {
+    font-size: 2em;
+    font-weight: bold;
   }
-}
-
-.js .progress-bar__progress {
-  width: 85%;
-}
-.ts .progress-bar__progress {
-  width: 60%;
-}
-.react .progress-bar__progress {
-  width: 65%;
-}
-.html .progress-bar__progress {
-  width: 95%;
-}
-.css .progress-bar__progress {
-  width: 90%;
-}
-.git .progress-bar__progress {
-  width: 85%;
-}
-.webpack .progress-bar__progress {
-  width: 65%;
 }
 
 .projects {
@@ -225,13 +204,13 @@ a {
 }
 
 .project {
-  & p {
+   p {
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   &:not(:last-child) {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   &__title {
@@ -253,7 +232,7 @@ a {
     font-weight: 500;
 
     &:not(:last-child) {
-      margin-bottom: 3.2rem;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -263,7 +242,7 @@ a {
     font-weight: 600;
 
     & li {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -300,5 +279,15 @@ a {
       padding-left: 10%;
       padding-right: 10%;
     }
+  }
+}
+
+.experience {
+  &__content-wrapper {
+    font-size: 2rem;
+  }
+
+  h3, p {
+    margin-bottom: 0.3em;
   }
 }

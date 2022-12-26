@@ -20,13 +20,20 @@ a {
 .header,
 .main {
   display: flex;
+}
+
+.header {
   flex-direction: row-reverse;
+}
+
+.main {
+  flex-direction: row;
 }
 
 .title {
   width: 64%;
-  padding-top: 6.3rem;
-  padding-bottom: 6.3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 .title .heading {
   padding-top: 7.2rem;
@@ -36,8 +43,8 @@ a {
 
 .userpic {
   width: 36%;
-  padding-top: 6.3rem;
-  padding-bottom: 6.3rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   background-color: #1b1e2f;
 }
 .userpic__content {
@@ -60,7 +67,7 @@ a {
   width: 64%;
 }
 .main-column .section {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 .main-column a {
   border-bottom: 2px dotted rgba(0, 0, 0, 0.2);
@@ -76,7 +83,7 @@ a {
   padding-right: 24%;
 }
 .sub-column .section {
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 .sub-column a {
   border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
@@ -93,7 +100,7 @@ a {
   font-weight: 600;
   line-height: 1.2em;
   padding: 0.5em 10%;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.5rem;
   position: relative;
 }
 .heading::before {
@@ -146,8 +153,8 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  -moz-column-gap: 80px;
-       column-gap: 80px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
 
 .skill {
@@ -158,44 +165,10 @@ a {
   font-size: 1.9rem;
   line-height: 1.2em;
   font-weight: 500;
-  margin-bottom: 1em;
 }
-
-.progress-bar {
-  height: 5px;
-  background: #ebebeb;
-}
-.progress-bar__progress {
-  height: 5px;
-  background-color: #fecb00;
-}
-
-.js .progress-bar__progress {
-  width: 85%;
-}
-
-.ts .progress-bar__progress {
-  width: 60%;
-}
-
-.react .progress-bar__progress {
-  width: 65%;
-}
-
-.html .progress-bar__progress {
-  width: 95%;
-}
-
-.css .progress-bar__progress {
-  width: 90%;
-}
-
-.git .progress-bar__progress {
-  width: 85%;
-}
-
-.webpack .progress-bar__progress {
-  width: 65%;
+.skill::marker {
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .projects ul {
@@ -210,7 +183,7 @@ a {
   text-overflow: ellipsis;
 }
 .project:not(:last-child) {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 .project__title {
   margin-bottom: 0.3em;
@@ -228,7 +201,7 @@ a {
   font-weight: 500;
 }
 .sub-column dd:not(:last-child) {
-  margin-bottom: 3.2rem;
+  margin-bottom: 1.5rem;
 }
 .sub-column .soft-skills__list {
   font-size: 2.1rem;
@@ -236,7 +209,7 @@ a {
   font-weight: 600;
 }
 .sub-column .soft-skills__list li {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (max-width: 1024px) {
@@ -265,4 +238,10 @@ a {
     padding-left: 10%;
     padding-right: 10%;
   }
+}
+.experience__content-wrapper {
+  font-size: 2rem;
+}
+.experience h3, .experience p {
+  margin-bottom: 0.3em;
 }/*# sourceMappingURL=style.css.map */
