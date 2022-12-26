@@ -28,6 +28,7 @@ a {
 
 .main {
   flex-direction: row;
+  position: relative;
 }
 
 .title {
@@ -45,7 +46,7 @@ a {
   width: 36%;
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background-color: #1b1e2f;
+  background-color: #babed8;
 }
 .userpic__content {
   background-image: url("../assets/jpeg/userpic.jpg");
@@ -74,8 +75,7 @@ a {
 }
 
 .sub-column {
-  background-color: #1b1e2f;
-  color: white;
+  background-color: #babed8;
   width: 36%;
 }
 .sub-column .content-wrapper {
@@ -127,14 +127,14 @@ a {
   background-color: #ebebeb;
 }
 .heading--dark {
-  background-color: #232537;
+  background-color: #d6d8ec;
 }
 .heading--dark::after {
   content: "";
   display: block;
   height: 4px;
   width: 100%;
-  background-color: #393a4d;
+  background-color: #a1a1a1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -244,4 +244,19 @@ a {
 }
 .experience h3, .experience p {
   margin-bottom: 0.3em;
+}
+
+.qr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+}
+.qr p {
+  text-align: center;
+  font-size: 1.2em;
+}
+.qr img {
+  display: block;
+  width: 200px;
 }/*# sourceMappingURL=style.css.map */

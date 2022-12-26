@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
 
-$dark-bg: #1b1e2f;
+$dark-bg: #babed8;
 $grey-bg: #ebebeb;
-$dark-title: #232537;
-$dark-title-underline: #393a4d;
+$dark-title: #d6d8ec;
+$dark-title-underline: #a1a1a1;
 $yellow: #fecb00;
 
 *,
@@ -35,6 +35,7 @@ a {
 
 .main {
   flex-direction: row;
+  position: relative;
 }
 
 .title {
@@ -86,7 +87,6 @@ a {
 
 .sub-column {
   background-color: $dark-bg;
-  color: white;
   width: 36%;
 
   .content-wrapper {
@@ -289,5 +289,22 @@ a {
 
   h3, p {
     margin-bottom: 0.3em;
+  }
+}
+
+.qr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+
+  p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  img {
+    display: block;
+    width: 200px;
   }
 }
